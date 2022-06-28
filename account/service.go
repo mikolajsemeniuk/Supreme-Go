@@ -25,7 +25,7 @@ func (s *Service) HandleRead(c *fiber.Ctx) error {
 	id, exists := c.AllParams()["id"]
 	if !exists {
 		c.SendStatus(http.StatusBadRequest)
-		return errors.New(`{ "error": cannot get id from route" }`)
+		return errors.New(`{ "error": "cannot get id from route" }`)
 	}
 
 	// Validate Params
